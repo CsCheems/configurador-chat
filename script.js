@@ -76,7 +76,6 @@ function generarUrlWidget(config) {
   document.getElementById("widgetUrlInput").value = finalUrl;
 }
 
-// Copiar al portapapeles
 function copiarUrl() {
   const input = document.getElementById("widgetUrlInput");
   input.select();

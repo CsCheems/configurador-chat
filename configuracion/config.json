@@ -28,22 +28,7 @@
             "defaultValue": true,
             "group": "Visual"
         },
-        {
-            "id": "excluirComandos",
-            "label": "Excluir Comandos",
-            "type": "checkbox",
-            "defaultValue": true,
-            "group": "General"
-        },
-        {
-            "id": "tamañoFuente",
-            "label": "Tamaño de Fuente",
-            "type": "number",
-            "min": 0,
-            "max": 42,
-            "defaultValue": 20,
-            "group": "Visual"
-        },
+        
         {
             "id": "mostrarCanjes",
             "label": "Mostrar Canjes de Canal",
@@ -70,6 +55,22 @@
             "label": "Mostrar Emotes Gigantes",
             "type": "checkbox",
             "defaultValue": true,
+            "group": "Visual"
+        },
+        {
+            "id": "excluirComandos",
+            "label": "Excluir Comandos",
+            "type": "checkbox",
+            "defaultValue": true,
+            "group": "General"
+        },
+        {
+            "id": "tamañoFuente",
+            "label": "Tamaño de Fuente",
+            "type": "number",
+            "min": 0,
+            "max": 42,
+            "defaultValue": 20,
             "group": "Visual"
         },
         {
