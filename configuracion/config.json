@@ -1,0 +1,97 @@
+{
+    "config":[
+        {
+            "id": "mostarAvatar",
+            "label": "Mostar Avatar",
+            "type": "checkbox",
+            "defaultValue": true,
+            "group": "Visual"
+        },
+        {
+            "id": "mostrarTiempo",
+            "label": "Mostar Tiempo",
+            "type": "checkbox",
+            "defaultValue": true,
+            "group": "Visual"
+        },
+        {
+            "id": "mostarInsigneas",
+            "label": "Mostar Insigneas",
+            "type": "checkbox",
+            "defaultValue": true,
+            "group": "Visual"
+        },
+        {
+            "id": "mostarImagenes",
+            "label": "Permitir Imagenes",
+            "type": "checkbox",
+            "defaultValue": true,
+            "group": "Visual"
+        },
+        {
+            "id": "excluirComandos",
+            "label": "Excluir Comandos",
+            "type": "checkbox",
+            "defaultValue": true,
+            "group": "General"
+        },
+        {
+            "id": "tamañoFuente",
+            "label": "Tamaño de Fuente",
+            "type": "number",
+            "min": 0,
+            "max": 42,
+            "defaultValue": 20,
+            "group": "Visual"
+        },
+        {
+            "id": "mostrarCanjes",
+            "label": "Mostrar Canjes de Canal",
+            "type": "checkbox",
+            "defaultValue": true,
+            "group": "Visual"
+        },
+        {
+            "id": "mostrarMensajesBits",
+            "label": "Mostrar Mensajes de Bits",
+            "type": "checkbox",
+            "defaultValue": true,
+            "group": "Visual"
+        },
+        {
+            "id": "mostrarRaids",
+            "label": "Mostrar Raids",
+            "type": "checkbox",
+            "defaultValue": true,
+            "group": "Visual"
+        },
+        {
+            "id": "mostrarEmotesGigantes",
+            "label": "Mostrar Emotes Gigantes",
+            "type": "checkbox",
+            "defaultValue": true,
+            "group": "Visual"
+        },
+        {
+			"id": "usuariosIgnorados",
+			"label": "Usuarios Ignorados",
+			"type": "text",
+			"defaultValue": "StreamElements, Streamlabs",
+			"group": "General"
+		},
+        {
+			"id": "hostInput",
+			"label": "Host",
+			"type": "text",
+			"defaultValue": "127.0.0.1",
+			"group": "General"
+		},
+        {
+			"id": "portInput",
+			"label": "Puerto",
+			"type": "text",
+			"defaultValue": "8080",
+			"group": "General"
+		}
+    ]
+}
