@@ -28,7 +28,13 @@
             "defaultValue": true,
             "group": "Visual"
         },
-        
+        {
+            "id": "rolesId",
+            "label": "Roles Permitidos",
+            "type": "select",
+            "defaultValue": 0, 
+            "group":"General"
+        },
         {
             "id": "mostrarCanjes",
             "label": "Mostrar Canjes de Canal",

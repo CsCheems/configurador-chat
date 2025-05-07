@@ -39,6 +39,13 @@ body {
     width: 45px;
 }
 
+.row .options{
+    padding: 6px;
+    border-radius: 5px;
+    width: 150px;
+    transform: translateX(-60%);
+}
+
 .row input[type=text],
 .row select {
     padding: 6px;
