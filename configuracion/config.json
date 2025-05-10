@@ -39,28 +39,28 @@
             "id": "mostrarCanjes",
             "label": "Mostrar Canjes de Canal",
             "type": "checkbox",
-            "defaultValue": true,
+            "defaultValue": false,
             "group": "Visual"
         },
         {
             "id": "mostrarMensajesBits",
             "label": "Mostrar Mensajes de Bits",
             "type": "checkbox",
-            "defaultValue": true,
+            "defaultValue": false,
             "group": "Visual"
         },
         {
             "id": "mostrarRaids",
             "label": "Mostrar Raids",
             "type": "checkbox",
-            "defaultValue": true,
+            "defaultValue": false,
             "group": "Visual"
         },
         {
             "id": "mostrarEmotesGigantes",
             "label": "Mostrar Emotes Gigantes",
             "type": "checkbox",
-            "defaultValue": true,
+            "defaultValue": false,
             "group": "Visual"
         },
         {

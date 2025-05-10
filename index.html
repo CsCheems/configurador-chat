@@ -11,8 +11,16 @@
 </head>
 <body>
     <div class="main-container">
+        <div class="url-header">
+          <h2>CHAT URL</h2>
+          <input class="url-settings" type="text" readonly id="widgetUrlInput"/>
+          <button class="btn-guardar" id="btnWidgetUrl" onclick="copiarUrl()">Click para generar URL</button>
+        </div>
+
         <div class="settings-container">
           <h2>Configuraciones</h2>
+
+          <h4>Apariencia</h4>
 
           <div class="row">
             <span class="switch-label">Mostrar Avatar</span>
@@ -37,9 +45,11 @@
               <span class="slider"></span>
             </label>
           </div>
+
+          <h4>General</h4>
       
           <div class="row">
-            <span class="switch-label">Permitir Imágenes (EXPERIMENTAL)</span>
+            <span class="switch-label">Permitir Imágenes</span>
             <label class="switch">
               <input type="checkbox" id="toggle-mostarImagenes">
               <span class="slider"></span>
@@ -52,42 +62,10 @@
               <select name="select" class="options" id="rolesId">
                 <option value="4">Streamer</option>
                 <option value="3">Moderadores y Streamer</option>
-                <option value="2" > Vips Moderadores y Streamer</option>
+                <option value="2" >Vips, Moderadores y Streamer</option>
                 <option value="1">Todos</option>
                 <option value="0" selected>Nadie</option>
               </select>
-            </label>
-          </div>
-
-          <div class="row">
-            <span class="switch-label">Mostrar Canjes</span>
-            <label class="switch">
-              <input type="checkbox" id="toggle-mostrarCanjes">
-              <span class="slider"></span>
-            </label>
-          </div>
-
-          <div class="row">
-            <span class="switch-label">Mostrar Bits</span>
-            <label class="switch">
-              <input type="checkbox" id="toggle-mostrarMensajesBits">
-              <span class="slider"></span>
-            </label>
-          </div>
-
-          <div class="row">
-            <span class="switch-label">Mostrar Raids</span>
-            <label class="switch">
-              <input type="checkbox" id="toggle-mostrarRaids">
-              <span class="slider"></span>
-            </label>
-          </div>
-
-          <div class="row">
-            <span class="switch-label">Mostrar Emotes Gigantes</span>
-            <label class="switch">
-              <input type="checkbox" id="toggle-mostrarEmotesGigantes">
-              <span class="slider"></span>
             </label>
           </div>
 
@@ -101,13 +79,57 @@
 
           <div class="row">
             <span class="switch-label">Tamaño de fuente</span>
-            <input type="number" id="tamañoFuente" min="8" max="72" value="">
+            <input type="number" id="tamañoFuente" min="1" max="42" value="">
           </div>
 
           <div class="row">
             <span class="switch-label">Usuario Ignorados</span>
             <input type="text" id="usuariosIgnorados" value="">
           </div>
+
+          <h4>¿Que mensajes quieres que se muestren?</h4>
+
+          <div class="row">
+            <span class="switch-label">Mostrar Canjeos de canal (<strong>proximamente</strong>)</span>
+            <label class="switch">
+              <input type="checkbox" id="toggle-mostrarCanjes" disabled>
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="row">
+            <span class="switch-label">Mostrar Donacion de Bits (<strong>proximamente</strong>)</span>
+            <label class="switch">
+              <input type="checkbox" id="toggle-mostrarMensajesBits" disabled>
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="row">
+            <span class="switch-label">Mostrar Raids (<strong>proximamente</strong>)</span>
+            <label class="switch">
+              <input type="checkbox" id="toggle-mostrarRaids" disabled>
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="row">
+            <span class="switch-label">Mostrar Follows (<strong>proximamente</strong>)</span>
+            <label class="switch">
+              <input type="checkbox" id="toggle-mostrarRaids" disabled>
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="row">
+            <span class="switch-label">Mostrar Emotes Gigantes (<strong>proximamente</strong>)</span>
+            <label class="switch">
+              <input type="checkbox" id="toggle-mostrarEmotesGigantes" disabled>
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <h4>Streamerbot</h4>
 
           <div class="row">
             <span class="switch-label">Host</span>
@@ -120,11 +142,7 @@
           </div>
       
         </div>
-        <div class="footer">
-          <h2>CHAT URL</h2>
-          <input class="url-settings" type="text" readonly id="widgetUrlInput"/>
-          <button class="btn-guardar" id="btnWidgetUrl" onclick="copiarUrl()">Click para generar URL</button>
-        </div>
+       
 
     </div>
 

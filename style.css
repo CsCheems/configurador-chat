@@ -7,52 +7,70 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    min-height: 100vh;
+}
 
+h4{
+    color: #2196F3;
 }
 
 .main-container {
     background: #f0f0f0;
-    padding: 20px 30px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 1);
     margin: 30px;
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
 }
 
 .settings-container h2 {
     margin-bottom: 20px;
     text-align: center;
-    width: 600px;
+    width: 100%;
 }
 
 .row {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     margin: 10px 0;
+    gap: 10px;
 }
 
-.row input[type=number],
-.row select {
+
+.row input[type=text] {
     padding: 6px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    width: 45px;
+    max-width: 100%;
+    min-width: 25%;
 }
 
-.row .options{
-    padding: 6px;
-    border-radius: 5px;
-    width: 150px;
-    transform: translateX(-60%);
-}
-
-.row input[type=text],
-.row select {
+.row input[type=number]{
     padding: 6px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    width: 100px;
+    max-width: 50%;
+    min-width: 25%;
+}
+
+.row select{
+    padding: 6px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    
+}
+
+.row .options {
+    padding: 6px;
+    border-radius: 5px;
+    max-width: 100%;
+    min-width: 50%;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
 .switch-label {
@@ -111,21 +129,24 @@ input:checked + .slider:before {
     transform: translateX(26px);
 }
 
-/* Footer */
-.footer {
+/* Header */
+.url-header {
     text-align: center;
     padding: 20px;
     background: #f0f0f0;
     border-radius: 10px;
-    width: 600px
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .url-settings {
-    width: 300px;
+    width: 100%;
     padding: 10px;
     margin-top: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    box-sizing: border-box;
 }
 
 .btn-guardar {
@@ -136,8 +157,28 @@ input:checked + .slider:before {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    width: 100%;
 }
 
 .btn-guardar:hover {
     background-color: #1976D2;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .row input[type=number],
+    .row input[type=text],
+    .row select,
+    .row .options {
+        width: 100%;
+    }
+
+    .switch-label {
+        margin-bottom: 5px;
+    }
 }

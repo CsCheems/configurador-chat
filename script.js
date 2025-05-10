@@ -16,22 +16,22 @@ const port = document.getElementById('portInput');
 const btnWidgetUrl = document.getElementById('btnWidgetUrl');
 const widgetUrlInput = document.getElementById('widgetUrlInput');
 
-// Cargar config.json externo
+
 fetch('./configuracion/config.json')
   .then(response => response.json())
   .then(config => {
-    applyDefaultSettings(config); // Aplicar valores por defecto desde config.json
-    loadFromURL(config); // Sobrescribir con valores de la URL si existen
+    applyDefaultSettings(config);
+    loadFromURL(config);
+    generarUrlWidget(config);
 
     document.getElementById('btnWidgetUrl').addEventListener('click', () => {
-      generarUrlWidget(config); // Generar URL personalizada del widget
+      generarUrlWidget(config);
     });
   })
   .catch(error => {
     console.error("Error cargando config.json:", error);
   });
 
-// Aplicar valores por defecto
 function applyDefaultSettings(config) {
   config.config.forEach(item => {
     const input = document.getElementById(`toggle-${item.id}`) || document.getElementById(item.id);
