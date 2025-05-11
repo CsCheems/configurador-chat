@@ -39,7 +39,14 @@
             "id": "mostrarCanjes",
             "label": "Mostrar Canjes de Canal",
             "type": "checkbox",
-            "defaultValue": false,
+            "defaultValue": true,
+            "group": "Visual"
+        },
+        {
+            "id": "mostrarDestacado",
+            "label": "Mostrar Mensajes Destacados",
+            "type": "checkbox",
+            "defaultValue": true,
             "group": "Visual"
         },
         {
@@ -52,6 +59,20 @@
         {
             "id": "mostrarRaids",
             "label": "Mostrar Raids",
+            "type": "checkbox",
+            "defaultValue": false,
+            "group": "Visual"
+        },
+        {
+            "id": "mostrarSubs",
+            "label": "Mostrar Subs",
+            "type": "checkbox",
+            "defaultValue": false,
+            "group": "Visual"
+        },
+        {
+            "id": "mostrarSubsRegaladas",
+            "label": "Mostrar Subs Regaladas",
             "type": "checkbox",
             "defaultValue": false,
             "group": "Visual"
