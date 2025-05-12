@@ -1,6 +1,20 @@
 {
     "config":[
         {
+            "id": "fondoColor",
+            "label": "Selecciona un Color de fondo",
+            "type": "color",
+            "defaultValue": "#000000",
+            "group": "Visual"
+        },
+        {
+            "id": "opacidad",
+            "label": "Selecciona la Opacidad (0 - 1)",
+            "type": "number",
+            "defaultValue": "0.75",
+            "group": "Visual"
+        },
+        {
             "id": "mostarAvatar",
             "label": "Mostar Avatar",
             "type": "checkbox",

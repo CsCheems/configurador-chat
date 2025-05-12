@@ -39,7 +39,7 @@ function applyDefaultSettings(config) {
 
     if (item.type === "checkbox") {
       input.checked = item.value ?? item.defaultValue ?? false;
-    } else if (item.type === "number" || item.type === "text") {
+    } else if (item.type === "number" || item.type === "text" || item.type === "color") {
       input.value = item.value ?? item.defaultValue ?? "";
     }
   });

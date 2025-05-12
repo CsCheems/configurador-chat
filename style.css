@@ -31,6 +31,40 @@ h4{
     width: 100%;
 }
 
+#fondoColorPantalla input[type="color"] {
+  -webkit-appearance: none; /* Quita el estilo nativo en Chrome/Safari */
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+#fondoColorPantalla input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+#fondoColorPantalla input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+}
+
+#fondoColorPantalla input[type="color"]::-moz-color-swatch {
+  border: none;
+  border-radius: 50%;
+}
+
+#opacidadPantalla input[type=number]{
+    padding: 6px;
+    border-radius: 5px;
+    max-width: 50%;
+    min-width: 25%;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
 .row {
     display: flex;
     flex-wrap: wrap;
