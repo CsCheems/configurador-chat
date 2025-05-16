@@ -77,6 +77,34 @@ function generarUrlWidget(config) {
 function copiarUrl() {
   const input = document.getElementById("widgetUrlInput");
   navigator.clipboard.writeText(input.value);
+
+  const urlCopiado = document.createElement('span');
+  urlCopiado.textContent = 'Copiado';
+  urlCopiado.style.textAlign = 'center';
+  urlCopiado.style.color = 'white';
+  urlCopiado.style.fontWeight = 'bold';
+  urlCopiado.style.position = 'absolute';
+  urlCopiado.style.backgroundColor = '#45A049';
+  urlCopiado.style.padding = '5px';
+  urlCopiado.style.borderRadius = '10px';
+  urlCopiado.style.zIndex = '2';
+  urlCopiado.style.opacity = '0';
+  urlCopiado.style.transform = 'translate(-50%, -112%)';
+  urlCopiado.style.transition = 'opacity 0.2s easy-in-out';
+
+  const widgetUrlInputContainer  = document.getElementById("widgetUrlInputContainer");
+  widgetUrlInputContainer.appendChild(urlCopiado);
+
+  void urlCopiado.offsetWidth;
+
+  urlCopiado.style.opacity = '1';
+
+  setTimeout(() => {
+    urlCopiado.style.opacity = '0';
+    setTimeout(() => {
+      widgetUrlInputContainer.removeChild(urlCopiado);
+    }, 500);
+  }, 5000);
 }
 
 // PREVIEW
