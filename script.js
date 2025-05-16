@@ -76,8 +76,6 @@ function generarUrlWidget(config) {
 
 function copiarUrl() {
   const input = document.getElementById("widgetUrlInput");
-  input.select();
-  input.setSelectionRange(0, 99999);
   navigator.clipboard.writeText(input.value);
 }
 

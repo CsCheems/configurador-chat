@@ -25,7 +25,7 @@ body {
   min-height: 90vh;
 }
 
-/* Vista previa */
+/* Vista previa
 #preview-container {
     
   flex: 1;
@@ -49,7 +49,7 @@ body {
   background-color: #000;
   position: relative;
   border-radius: 10px;
-}
+} */
 
 /* Configuraciones */
 #config-container {
@@ -63,7 +63,13 @@ body {
 }
 
 .url-header {
+  text-align: center;
   margin-bottom: 20px;
+}
+
+.blur-on-lose-focus:not(:focus) {
+     color: transparent;
+     text-shadow: 0 0 5px rgba(255,255,255,0.9);
 }
 
 .url-settings {
