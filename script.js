@@ -45,7 +45,6 @@ function applyDefaultSettings(config) {
   });
 }
 
-// Aplicar desde la URL
 function loadFromURL(config) {
   const urlParams = new URLSearchParams(window.location.search);
   config.config.forEach(item => {
@@ -60,7 +59,6 @@ function loadFromURL(config) {
   });
 }
 
-// Generar la URL del widget
 function generarUrlWidget(config) {
   const baseUrl = "https://cscheems.github.io/Streamerbot-Chat-Widget/";
   const params = new URLSearchParams();
@@ -82,3 +80,59 @@ function copiarUrl() {
   input.setSelectionRange(0, 99999);
   navigator.clipboard.writeText(input.value);
 }
+
+// PREVIEW
+
+// function actualizarPreview() {
+//   const baseURL = "https://cscheems.github.io/Streamerbot-Chat-Widget/";
+
+//   // Obtener valores
+//   const fondoColor = document.getElementById("fondoColor").value;
+//   const opacidad = document.getElementById("opacidad").value;
+//   const mostarAvatar = document.getElementById("toggle-mostarAvatar").checked;
+//   const mostrarTiempo = document.getElementById("toggle-mostrarTiempo").checked;
+//   const mostarInsigneas = document.getElementById("toggle-mostarInsigneas").checked;
+//   const mostarImagenes = document.getElementById("toggle-mostarImagenes").checked;
+//   const rolesId = document.getElementById("rolesId").value;
+//   const mostrarCanjes = document.getElementById("toggle-mostrarCanjes").checked;
+//   const mostrarDestacado = document.getElementById("toggle-mostrarDestacado").checked;
+//   const mostrarRaids = document.getElementById("toggle-mostrarRaids")?.checked || false;
+//   const mostrarSubs = document.getElementById("toggle-mostrarSubs")?.checked || false;
+//   const mostrarSubsRegaladas = document.getElementById("toggle-mostrarSubsRegaladas")?.checked || false;
+//   const mostrarEmotesGigantes = document.getElementById("toggle-mostrarEmotesGigantes")?.checked || false;
+//   const excluirComandos = document.getElementById("toggle-excluirComandos").checked;
+//   const tamañoFuente = document.getElementById("tamañoFuente").value;
+//   const usuariosIgnorados = document.getElementById("usuariosIgnorados").value;
+//   const hostInput = document.getElementById("hostInput").value;
+//   const portInput = document.getElementById("portInput").value;
+
+//   // Construir parámetros
+//   const params = new URLSearchParams({
+//     fondoColor,
+//     opacidad,
+//     mostarAvatar,
+//     mostrarTiempo,
+//     mostarInsigneas,
+//     mostarImagenes,
+//     rolesId,
+//     mostrarCanjes,
+//     mostrarDestacado,
+//     mostrarRaids,
+//     mostrarSubs,
+//     mostrarSubsRegaladas,
+//     mostrarEmotesGigantes,
+//     excluirComandos,
+//     "tamañoFuente": tamañoFuente,
+//     usuariosIgnorados,
+//     hostInput,
+//     portInput
+//   });
+
+//   document.getElementById("chat-preview-frame").src = `${baseURL}?${params.toString()}`;
+// }
+
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   actualizarPreview();
+// });
+
