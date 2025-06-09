@@ -40,7 +40,7 @@
             "label": "Permitir Imagenes",
             "type": "checkbox",
             "defaultValue": true,
-            "group": "Visual"
+            "group": "General"
         },
         {
             "id": "rolesId",
@@ -50,53 +50,67 @@
             "group":"General"
         },
         {
+            "id": "mensajesAgrupados",
+            "label": "Mostrar mensajes agrupados",
+            "type": "checkbox",
+            "defaultValue": false,
+            "group": "General"
+        },
+        {
+            "id": "tiempoMs",
+            "label": "Ocultar Mensajes despues de cierto tiempo (segundos)",
+            "type": "number",
+            "defaultValue": "0",
+            "group": "General"
+        },
+        {
             "id": "mostrarCanjes",
             "label": "Mostrar Canjes de Canal",
             "type": "checkbox",
             "defaultValue": true,
-            "group": "Visual"
+            "group": "Mensajes Destacables"
         },
         {
             "id": "mostrarDestacado",
             "label": "Mostrar Mensajes Destacados",
             "type": "checkbox",
             "defaultValue": true,
-            "group": "Visual"
+            "group": "Mensajes Destacables"
         },
         {
             "id": "mostrarMensajesBits",
             "label": "Mostrar Mensajes de Bits",
             "type": "checkbox",
             "defaultValue": false,
-            "group": "Visual"
+            "group": "Mensajes Destacables"
         },
         {
             "id": "mostrarRaids",
             "label": "Mostrar Raids",
             "type": "checkbox",
             "defaultValue": false,
-            "group": "Visual"
+            "group": "Mensajes Destacables"
         },
         {
             "id": "mostrarSubs",
             "label": "Mostrar Subs",
             "type": "checkbox",
             "defaultValue": false,
-            "group": "Visual"
+            "group": "Mensajes Destacables"
         },
         {
             "id": "mostrarSubsRegaladas",
             "label": "Mostrar Subs Regaladas",
             "type": "checkbox",
             "defaultValue": false,
-            "group": "Visual"
+            "group": "Mensajes Destacables"
         },
         {
             "id": "mostrarEmotesGigantes",
             "label": "Mostrar Emotes Gigantes",
             "type": "checkbox",
             "defaultValue": false,
-            "group": "Visual"
+            "group": "Mensajes Destacables"
         },
         {
             "id": "excluirComandos",
@@ -105,6 +119,13 @@
             "defaultValue": true,
             "group": "General"
         },
+         {
+			"id": "fuenteLetra",
+			"label": "Fuente de Letra",
+			"type": "text",
+			"defaultValue": "Arial",
+			"group": "Visual"
+		},
         {
             "id": "tamañoFuente",
             "label": "Tamaño de Fuente",
@@ -118,7 +139,7 @@
 			"id": "usuariosIgnorados",
 			"label": "Usuarios Ignorados",
 			"type": "text",
-			"defaultValue": "StreamElements, Streamlabs",
+			"defaultValue": "StreamElements, Streamlabs, Nightbot",
 			"group": "General"
 		},
         {
@@ -126,14 +147,14 @@
 			"label": "Host",
 			"type": "text",
 			"defaultValue": "127.0.0.1",
-			"group": "General"
+			"group": "Streamerbot"
 		},
         {
 			"id": "portInput",
 			"label": "Puerto",
 			"type": "text",
 			"defaultValue": "8080",
-			"group": "General"
+			"group": "Streamerbot"
 		}
     ]
 }

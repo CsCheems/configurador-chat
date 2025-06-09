@@ -20,7 +20,7 @@ body {
 .layout-container {
   display: flex;
   gap: 20px;
-  width: 100%;
+  width: 50%;
   max-width: 1400px;
   min-height: 90vh;
 }
@@ -139,7 +139,6 @@ select {
   border-radius: 6px;
 }
 
-/* Switch toggle */
 .switch {
   position: relative;
   display: inline-block;

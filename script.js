@@ -1,3 +1,4 @@
+
 // Parámetros de la URL
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
@@ -20,6 +21,7 @@ const widgetUrlInput = document.getElementById('widgetUrlInput');
 fetch('./configuracion/config.json')
   .then(response => response.json())
   .then(config => {
+    armarFormulario(config);
     applyDefaultSettings(config);
     loadFromURL(config);
     generarUrlWidget(config);
@@ -106,6 +108,91 @@ function copiarUrl() {
     }, 500);
   }, 5000);
 }
+
+function armarFormulario(config) {
+  const contenedor = document.querySelector('.settings-container');
+  contenedor.innerHTML = '<h2>Configuraciones</h2>';
+
+  const grupos = {};
+  config.config.forEach(campo => {
+    if (!grupos[campo.group]) {
+      grupos[campo.group] = [];
+    }
+    grupos[campo.group].push(campo);
+  });
+
+  Object.keys(grupos).forEach(grupo => {
+    const tituloGrupo = document.createElement('h4');
+    tituloGrupo.textContent = grupo === "Visual" ? "Apariencia" : grupo;
+    contenedor.appendChild(tituloGrupo);
+
+    grupos[grupo].forEach(campo => {
+      const row = document.createElement('div');
+      row.className = 'row';
+
+      const label = document.createElement('span');
+      label.className = 'switch-label';
+      label.textContent = campo.label;
+      row.appendChild(label);
+
+      if (campo.type === 'checkbox') {
+        const switchLabel = document.createElement('label');
+        switchLabel.className = 'switch';
+
+        const input = document.createElement('input');
+        input.type = 'checkbox';
+        input.id = `toggle-${campo.id}`;
+        input.checked = campo.defaultValue;
+        if (campo.disabled) input.disabled = true;
+
+        const slider = document.createElement('span');
+        slider.className = 'slider';
+
+        switchLabel.appendChild(input);
+        switchLabel.appendChild(slider);
+        row.appendChild(switchLabel);
+
+      } else if (campo.type === 'select') {
+        const select = document.createElement('select');
+        select.className = 'options';
+        select.id = campo.id;
+
+        // Puedes personalizar estas opciones dinámicamente si vienen del JSON
+        const opciones = [
+          { value: 4, text: "Streamer" },
+          { value: 3, text: "Moderadores y Streamer" },
+          { value: 2, text: "Vips, Moderadores y Streamer" },
+          { value: 1, text: "Todos" },
+          { value: 0, text: "Nadie" }
+        ];
+
+        opciones.forEach(opt => {
+          const option = document.createElement('option');
+          option.value = opt.value;
+          option.textContent = opt.text;
+          if (parseInt(campo.defaultValue) === opt.value) option.selected = true;
+          select.appendChild(option);
+        });
+
+        row.appendChild(select);
+
+      } else {
+        const input = document.createElement('input');
+        input.type = campo.type;
+        input.id = campo.id;
+        input.value = campo.defaultValue;
+
+        if (campo.min !== undefined) input.min = campo.min;
+        if (campo.max !== undefined) input.max = campo.max;
+
+        row.appendChild(input);
+      }
+
+      contenedor.appendChild(row);
+    });
+  });
+}
+
 
 // PREVIEW
 
