@@ -29,6 +29,13 @@
             "group": "Visual"
         },
         {
+            "id": "mostrarUsuario",
+            "label": "Mostar Usuario",
+            "type": "checkbox",
+            "defaultValue": true,
+            "group": "Visual"
+        },
+        {
             "id": "mostarInsigneas",
             "label": "Mostar Insigneas",
             "type": "checkbox",
@@ -127,7 +134,7 @@
 			"group": "Visual"
 		},
         {
-            "id": "tamañoFuente",
+            "id": "tamanoFuente",
             "label": "Tamaño de Fuente",
             "type": "number",
             "min": 0,

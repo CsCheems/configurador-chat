@@ -4,18 +4,18 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const configJson = urlParams.get("configJson") || "";
 
-const widgetUrl = urlParams.get("widgetUrl") || "";
-const mostrarAvatar = document.getElementById('toggle-mostarAvatar');
-const mostrarTiempo = document.getElementById('toggle-mostrarTiempo');
-const mostrarInsignias = document.getElementById('toggle-mostarInsigneas');
-const permitirImagenes = document.getElementById('toggle-mostarImagenes');
-const permitirComandos = document.getElementById('toggle-excluirComandos');
-const fontSize = document.getElementById('tamañoFuente');
-const ignoredUsers = document.getElementById('usuariosIgnorados');
-const host = document.getElementById('hostInput');
-const port = document.getElementById('portInput');
-const btnWidgetUrl = document.getElementById('btnWidgetUrl');
-const widgetUrlInput = document.getElementById('widgetUrlInput');
+// const widgetUrl = urlParams.get("widgetUrl") || "";
+// const mostrarAvatar = document.getElementById('toggle-mostarAvatar');
+// const mostrarTiempo = document.getElementById('toggle-mostrarTiempo');
+// const mostrarInsignias = document.getElementById('toggle-mostarInsigneas');
+// const permitirImagenes = document.getElementById('toggle-mostarImagenes');
+// const permitirComandos = document.getElementById('toggle-excluirComandos');
+// const fontSize = document.getElementById('tamañoFuente');
+// const ignoredUsers = document.getElementById('usuariosIgnorados');
+// const host = document.getElementById('hostInput');
+// const port = document.getElementById('portInput');
+// const btnWidgetUrl = document.getElementById('btnWidgetUrl');
+// const widgetUrlInput = document.getElementById('widgetUrlInput');
 
 
 fetch('./configuracion/config.json')
@@ -156,8 +156,7 @@ function armarFormulario(config) {
         const select = document.createElement('select');
         select.className = 'options';
         select.id = campo.id;
-
-        // Puedes personalizar estas opciones dinámicamente si vienen del JSON
+        
         const opciones = [
           { value: 4, text: "Streamer" },
           { value: 3, text: "Moderadores y Streamer" },
